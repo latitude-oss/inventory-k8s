@@ -1,0 +1,15 @@
+resources:
+  - ../../base
+  - ingress-patch.yaml
+
+namespace: application
+
+# Cambiamo il messaggio del container solo per l'ambiente locale
+patches:
+  - target:
+      kind: Deployment
+      name: echo-service
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/args
+        value: ["-text=Risposta dal TEST LOCALE tramite KONG"]
