@@ -4,6 +4,7 @@ metadata:
   name: echo-ingress
   annotations:
     kubernetes.io/ingress.class: kong
+    konghq.com/plugins: jwt-auth-plugin, global-rate-limit
 spec:
   rules:
   - http:
