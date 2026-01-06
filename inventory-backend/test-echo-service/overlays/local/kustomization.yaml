@@ -4,6 +4,10 @@ resources:
 
 namespace: application
 
+replicas:
+  - name: echo-service
+    count: 3
+
 # Cambiamo il messaggio del container solo per l'ambiente locale
 patches:
   - target:
