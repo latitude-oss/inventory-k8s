@@ -6,7 +6,7 @@ namespace: application
 
 replicas:
   - name: echo-service
-    count: 3
+    count: 1
 
 # Cambiamo il messaggio del container solo per l'ambiente locale
 patches:
